@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: rgb(200, 97, 97); /* Light gray background */
+    --foreground: rgb(50, 50, 50); /* Dark gray text color */
+
+    --primary: rgb(70, 130, 180); /* Light blue primary button */
+    --primary-foreground: rgb(255, 255, 255); /* White text on primary button */
+
+    --secondary: rgb(144, 238, 144); /* Light green secondary button */
+    --secondary-foreground: rgb(0, 0, 0); /* Black text on secondary button */
+
+    --accent: rgb(255, 182, 193); /* Light pink accent button */
+    --accent-foreground: rgb(0, 0, 0); /* Black text on accent button */
+
+    --destructive: rgb(255, 69, 0); /* Red destructive button */
+    --destructive-foreground: rgb(255, 255, 255); /* White text on destructive button */
+
+    --border: rgb(200, 200, 200);
+    --input: rgb(255, 255, 255);
+    --ring: rgb(50, 50, 50);
+
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: rgb(45, 45, 45); /* Dark gray background */
+    --foreground: rgb(200, 200, 200); /* Light gray text color */
+
+    --primary: rgb(25, 25, 112); /* Dark blue primary button */
+    --primary-foreground: rgb(255, 255, 255); /* White text on primary button */
+
+    --secondary: rgb(60, 179, 113); /* Dark green secondary button */
+    --secondary-foreground: rgb(255, 255, 255); /* White text on secondary button */
+
+    --accent: rgb(255, 105, 180); /* Hot pink accent button */
+    --accent-foreground: rgb(255, 255, 255); /* White text on accent button */
+
+    --destructive: rgb(139, 0, 0); /* Dark red destructive button */
+    --destructive-foreground: rgb(255, 255, 255); /* White text on destructive button */
+
+    --border: rgb(100, 100, 100);
+    --input: rgb(60, 60, 60);
+    --ring: rgb(150, 150, 150);
+  }
+}
+
+body {
+  font-family: var(--font-ibm_plex_serif), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-dm_serif_display), sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
